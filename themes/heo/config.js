@@ -23,7 +23,7 @@ const CONFIG = {
   HEO_HERO_TITLE_3: '提供优质资源与技术教程📔',
   HEO_HERO_TITLE_4: '一个人的价值，在于他贡献了什么，而不在于他获得了什么！',
   HEO_HERO_TITLE_5: '赠人玫瑰🌹手有余香',
-  HEO_HERO_TITLE_LINK: 'https://blog.lmlat.com',
+  HEO_HERO_TITLE_LINK: 'https://blog.lmlat.cn',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
 
@@ -33,19 +33,24 @@ const CONFIG = {
   HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  HEO_HERO_RECOMMEND_POST_TAG: '推荐',
+  HEO_HERO_RECOMMEND_POST_TAG: '',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
     '你好！我是',
+    '☕ 慢生活的坚定追求者',
+    '🌸 细腻温柔的金牛派',
     '🔍 分享与热心帮助',
-    '🤝 专修交互与设计',
-    '🏃 脚踏实地行动派',
-    '🏠 智能家居小能手',
+    '🏃 脚踏实地实干派',
     '🤖️ 数码科技爱好者',
-    '🧱 团队小组发动机'
+    '🌟 偏爱简单的小幸福',
+    '💖 金牛座的长情坚守',
+    '🎁 收藏生活里的小美好',
+    '🍃 捕捉平凡里的小确幸',
+    '🤝 默默付出的靠谱派',
+    '🔧 技术难题的解题小能手'
   ],
 
   // 个人资料底部按钮
@@ -118,7 +123,7 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '公众号',
-  HEO_SOCIAL_CARD_TITLE_2: '防失陪关注微信公众号',
+  HEO_SOCIAL_CARD_TITLE_2: '防失联关注微信公众号',
   HEO_SOCIAL_CARD_TITLE_3: '点击扫码关注公众号',
   HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
 
