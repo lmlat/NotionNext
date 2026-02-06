@@ -21,9 +21,76 @@ const SocialButton = () => {
 
   const emailIcon = useRef(null)
 
+  useEffect(() => {
+  if (!showWechatQR) return
+
+  const handleClickOutside = (e) => {
+    if (
+      wechatWrapperRef.current &&
+      !wechatWrapperRef.current.contains(e.target)
+    ) {
+      setShowWechatQR(false)
+    }
+  }
+
+  document.addEventListener('click', handleClickOutside)
+  return () => document.removeEventListener('click', handleClickOutside)
+}, [showWechatQR])
+  
   return (
     <div className='w-full justify-center flex-wrap flex'>
       <div className='space-x-12 text-3xl text-gray-600 dark:text-gray-300 '>
+        <a
+            target='_blank'
+            rel='noreferrer'
+            title='xiaohongshu'
+            href=''>
+            <img
+              src='https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/xiaohongshu.b9cpfgij9.svg'
+              alt='xiaohongshu'
+              className='inline-block transform hover:scale-125 duration-150 dark:hover:opacity-90 hover:opacity-90'
+              style={{ width: '1em', height: '1em', verticalAlign: '-0.125em' }}
+            />
+          </a>
+         <div
+            ref={wechatWrapperRef}
+            className='relative inline-flex'
+            onPointerEnter={(e) => {
+              if (e.pointerType === 'mouse') setShowWechatQR(true)
+            }}
+            onPointerLeave={(e) => {
+              if (e.pointerType === 'mouse') setShowWechatQR(false)
+            }}
+          >
+            <span
+              className='cursor-pointer transform transition-transform duration-150 hover:scale-125'
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                setShowWechatQR(v => !v)
+              }}
+            >
+              <i className='fab fa-weixin dark:hover:text-indigo-400 hover:text-indigo-600' />
+            </span>
+            {showWechatQR && (
+              <div className='absolute bottom-12 left-1/2 -translate-x-1/2 z-40'>
+                <div
+                  className='w-36 rounded-xl bg-white dark:bg-neutral-800 shadow-2xl ring-1 ring-black/5 flex flex-col items-center px-3 py-2'
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <img
+                    src='https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/qrcode.1ovwa0ke25.png'
+                    alt='微信公众号二维码'
+                    className='block w-28 h-28 object-contain'
+                    draggable={false}
+                  />
+                  <div className='mt-1 text-[11px] leading-none text-gray-600 dark:text-gray-300 whitespace-nowrap'>
+                    扫码关注公众号
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         {CONTACT_GITHUB && (
           <a
             target='_blank'
