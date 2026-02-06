@@ -25,6 +25,9 @@ const Style = () => {
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
+        background: rgba(60, 60, 67, 0.4);
+        border-radius: 8px;
+        cursor: pointer;
       }
 
       #more {
@@ -32,8 +35,8 @@ const Style = () => {
       }
 
       .today-card-cover {
-        -webkit-mask-image: linear-gradient(to top, transparent 5%, black 70%);
-        mask-image: linear-gradient(to top, transparent 5%, black 70%);
+        -webkit-mask-image: linear-gradient(to top, transparent 5%, black 60%);
+        mask-image: linear-gradient(to top, transparent 5%, black 60%);
       }
 
       .recent-top-post-group::-webkit-scrollbar {
