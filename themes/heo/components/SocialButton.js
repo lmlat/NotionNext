@@ -18,7 +18,9 @@ const SocialButton = () => {
   const ENABLE_RSS = siteConfig('ENABLE_RSS')
   const CONTACT_BILIBILI = siteConfig('CONTACT_BILIBILI')
   const CONTACT_YOUTUBE = siteConfig('CONTACT_YOUTUBE')
-
+  const [showWechatQR, setShowWechatQR] = useState(false)
+  const wechatWrapperRef = useRef(null)
+  
   const emailIcon = useRef(null)
 
   useEffect(() => {
