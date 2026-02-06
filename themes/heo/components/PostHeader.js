@@ -32,7 +32,12 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
           top: 0;
           left: 0;
           box-shadow: 110px -130px 500px 100px
-            ${isDarkMode ? '#CA8A04' : '#0060e0'} inset;
+            ${isDarkMode ? '#CA8A04' : '#09a4f5'} inset;
+        }
+        .coverdiv {
+          overflow: hidden; /* 隐藏溢出部分 */
+          backface-visibility: hidden; /* 隐藏旋转后可能的边缘显示 */
+          transform-style: preserve-3d;
         }
       `}</style>
 
