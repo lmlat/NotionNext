@@ -39,6 +39,10 @@ const Style = () => {
         mask-image: linear-gradient(to top, transparent -5%, black 60%);
       }
 
+      #today-card-info{
+        padding: 1.5rem;
+      }
+
       .recent-top-post-group::-webkit-scrollbar {
         display: none;
       }
