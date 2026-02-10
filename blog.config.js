@@ -52,7 +52,7 @@ const BLOG = {
   ...require('./conf/dev.config'), // 开发、调试时需要关注的配置
 
   // 自定义外部脚本，外部样式
-  CUSTOM_EXTERNAL_JS: [''], // e.g. ['http://xx.com/script.js','http://xx.com/script.js']
+  CUSTOM_EXTERNAL_JS: ['https://cdn.jsdmirror.com/npm/pace-js@latest/pace.min.js','https://cdn.jsdmirror.com/npm/instant.page@5.2.0/instantpage.min.js'], // e.g. ['http://xx.com/script.js','http://xx.com/script.js']
   CUSTOM_EXTERNAL_CSS: ['https://lmlat.github.io/picx-images-hosting/blog/global.css', 'https://lmlat.github.io/picx-images-hosting/blog/common.css'], // e.g. ['http://xx.com/style.css','http://xx.com/style.css']
 
   // 自定义菜单
