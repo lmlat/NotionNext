@@ -19,7 +19,7 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
 
   return latestPosts ? (
     <>
-      <div className=' mb-2 px-1 flex flex-nowrap justify-between'>
+      <div className='mb-2 px-1 flex flex-nowrap justify-between font-semibold'>
         <div>
           <i className='mr-2 fas fas fa-history' />
           {locale.COMMON.LATEST_POSTS}
@@ -49,7 +49,7 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
               className={
                 (selected ? ' text-indigo-400 ' : 'dark:text-gray-200') +
                 ' text-sm overflow-x-hidden hover:text-indigo-600 px-2 duration-200 w-full rounded ' +
-                ' hover:text-indigo-400 dark:hover:text-yellow-600 cursor-pointer items-center flex'
+                ' hover:text-indigo-400 dark:hover:text-yellow-600 cursor-pointer items-center flex font-semibold'
               }>
               <div>
                 <div className='line-clamp-2 menu-link'>{post.title}</div>
