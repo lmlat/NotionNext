@@ -8,7 +8,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://blog.lmlat.cn' },
+    { title: '👋🏻欢迎来到我的博客', url: 'https://blog.lmlat.cn' },
     { title: 'Ctrl＋D 收藏本站不迷路~', url: 'https://blog.lmlat.cn' }
   ],
 
@@ -28,9 +28,9 @@ const CONFIG = {
   HEO_HERO_COVER_TITLE: '随便逛逛',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/selected' },
-  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/popular' },
-  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/tutorial' },
+  HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/精选' },
+  HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门' },
+  HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/教程' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '',
