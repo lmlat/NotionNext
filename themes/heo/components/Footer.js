@@ -20,7 +20,7 @@ const Footer = () => {
       />
 
       {/* 社交按钮 */}
-      <div className='w-full h-24'>
+      <div className='w-full h-16'>
         <SocialButton />
       </div>
 

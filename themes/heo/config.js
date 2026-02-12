@@ -8,8 +8,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '👋🏻欢迎来到我的博客', url: 'https://blog.lmlat.cn' },
-    { title: 'Ctrl＋D 收藏本站不迷路~', url: 'https://blog.lmlat.cn' }
+    { title: '👋🏻欢迎来到我的博客🌸', url: 'https://blog.lmlat.cn' },
+    { title: '🌟Ctrl＋D 收藏本站不迷路~', url: 'https://blog.lmlat.cn' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -20,9 +20,9 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '分享教程',
   HEO_HERO_TITLE_2: '与思维认知',
-  HEO_HERO_TITLE_3: '提供优质资源与技术教程📔',
+  HEO_HERO_TITLE_3: '✨提供优质资源与技术教程📖',
   HEO_HERO_TITLE_4: '一个人的价值，在于他贡献了什么，而不在于他获得了什么！',
-  HEO_HERO_TITLE_5: '赠人玫瑰🌹手有余香',
+  HEO_HERO_TITLE_5: '🌹赠人玫瑰, 手有余香🌿',
   HEO_HERO_TITLE_LINK: 'https://blog.lmlat.cn',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
