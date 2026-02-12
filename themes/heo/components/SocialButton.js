@@ -22,7 +22,6 @@ const SocialButton = () => {
   const [showWechatQR, setShowWechatQR] = useState(false)
   const wechatWrapperRef = useRef(null)
 
-  console.log("CONTACT_GITHUB:", CONTACT_GITHUB)
   const emailIcon = useRef(null)
 
   useEffect(() => {
@@ -41,26 +40,28 @@ const SocialButton = () => {
     return () => document.removeEventListener('click', handleClickOutside)
   }, [showWechatQR])
 
+  const showWechatQRHover = (e, v) => {
+    if (e.pointerType === 'mouse') setShowWechatQR(v)
+  }
+
+  const showWechatQRClick = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setShowWechatQR(v => !v)
+  }
+
   return (
     <div className='w-full justify-center flex-wrap flex'>
       <div className='space-x-8 text-3xl text-gray-600 dark:text-gray-300 '>
         <div
           ref={wechatWrapperRef}
           className='relative inline-flex'
-          onPointerEnter={(e) => {
-            if (e.pointerType === 'mouse') setShowWechatQR(true)
-          }}
-          onPointerLeave={(e) => {
-            if (e.pointerType === 'mouse') setShowWechatQR(false)
-          }}
+          onPointerEnter={(e) => showWechatQRHover(e,true)}
+          onPointerLeave={(e) => showWechatQRHover(e,false)}
         >
             <span
               className='cursor-pointer transform transition-transform duration-150 hover:scale-125'
-              onClick={(e) => {
-                e.preventDefault()
-                e.stopPropagation()
-                setShowWechatQR(v => !v)
-              }}
+              onClick={(e)=> showWechatQRClick(e)}
             >
               <i className='fab fa-weixin dark:hover:text-indigo-400 hover:text-indigo-600' />
             </span>
@@ -94,6 +95,26 @@ const SocialButton = () => {
               alt="xiaohongshu"
               className="blog-xiaohongshu inline-block transform hover:scale-125 duration-150 dark:hover:opacity-90 hover:opacity-90"
             />
+          </a>
+        )}
+        {CONTACT_WEIBO && (
+          <a
+            target='_blank'
+            rel='noreferrer'
+            title={'weibo'}
+            href={CONTACT_WEIBO}>
+            <i
+              className='transform hover:scale-125 duration-150 fab fa-weibo dark:hover:text-indigo-400 hover:text-indigo-600' />
+          </a>
+        )}
+        {CONTACT_BILIBILI && (
+          <a
+            target='_blank'
+            rel='noreferrer'
+            title={'bilibili'}
+            href={CONTACT_BILIBILI}>
+            <i
+              className='transform hover:scale-125 duration-150 fab fa-bilibili dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
         )}
         {CONTACT_GITHUB && (
@@ -136,14 +157,14 @@ const SocialButton = () => {
               className='transform hover:scale-125 duration-150 fab fa-linkedin dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
         )}
-        {CONTACT_WEIBO && (
+        {CONTACT_YOUTUBE && (
           <a
             target='_blank'
             rel='noreferrer'
-            title={'weibo'}
-            href={CONTACT_WEIBO}>
+            title={'youtube'}
+            href={CONTACT_YOUTUBE}>
             <i
-              className='transform hover:scale-125 duration-150 fab fa-weibo dark:hover:text-indigo-400 hover:text-indigo-600' />
+              className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
         )}
         {CONTACT_INSTAGRAM && (
@@ -174,26 +195,6 @@ const SocialButton = () => {
             href={'/rss/feed.xml'}>
             <i
               className='transform hover:scale-125 duration-150 fas fa-rss dark:hover:text-indigo-400 hover:text-indigo-600' />
-          </a>
-        )}
-        {CONTACT_BILIBILI && (
-          <a
-            target='_blank'
-            rel='noreferrer'
-            title={'bilibili'}
-            href={CONTACT_BILIBILI}>
-            <i
-              className='transform hover:scale-125 duration-150 fab fa-bilibili dark:hover:text-indigo-400 hover:text-indigo-600' />
-          </a>
-        )}
-        {CONTACT_YOUTUBE && (
-          <a
-            target='_blank'
-            rel='noreferrer'
-            title={'youtube'}
-            href={CONTACT_YOUTUBE}>
-            <i
-              className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-indigo-400 hover:text-indigo-600' />
           </a>
         )}
       </div>
