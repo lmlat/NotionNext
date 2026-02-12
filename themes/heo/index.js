@@ -35,6 +35,7 @@ import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
+import AIArticleSummary from './components/AIArticleSummary'
 import ArticleExpirationNotice from '@/components/ArticleExpirationNotice'
 
 /**
@@ -304,6 +305,7 @@ const LayoutSlug = props => {
                 <ArticleExpirationNotice post={post} />
                 <AISummary aiSummary={post.aiSummary} />
                 <WWAds orientation='horizontal' className='w-full' />
+                {post && <AIArticleSummary post={post} />}
                 {post && <NotionPage post={post} />}
                 <WWAds orientation='horizontal' className='w-full' />
               </section>
